@@ -10,7 +10,10 @@ export default function BlogPage() {
       <ul className="space-y-4">
         {posts.map((post) => (
           <li key={post.slug}>
-            <Link href={`/blog/${post.slug}`} className="text-blue-600 hover:underline">
+            <Link
+              href={`/blog/${post.slug}`}
+              className="text-blue-600 hover:underline"
+            >
               {post.title}
             </Link>
             <span className="text-gray-500 ml-2">{post.date}</span>

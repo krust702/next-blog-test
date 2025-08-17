@@ -1,19 +1,19 @@
 import { getPostBySlug } from "../../lib/posts";
-import { use } from "react"; 
+import { use } from "react";
 
 export default function PostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params); 
-  const post = use(getPostBySlug(slug)); 
+  const { slug } = use(params);
+  const post = use(getPostBySlug(slug));
 
-  const specialStyle = post.style === "special" ? "bg-yellow-50 p-6 rounded-lg" : "";
+  const specialStyle = post.style === "special" ? "bg-yellow-900 p-6 rounded-lg" : "";
 
   return (
     <main className={`max-w-4xl mx-auto p-6 ${specialStyle}`}>
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
       <p className="text-gray-500 mb-6">{post.date}</p>
 
-      <div
-        className="prose max-w-none prose-img:rounded-lg prose-img:w-full prose-img:h-auto"
+      <article
+        className="prose prose-lg max-w-none prose-img:rounded-lg prose-img:w-full prose-img:h-auto"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </main>
