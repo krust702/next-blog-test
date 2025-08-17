@@ -1,6 +1,10 @@
 import { getPostBySlug } from "../../lib/posts";
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
+export default async function PostPage({
+  params,
+}: {
+  params: Record<string, string>;
+}) {
   const post = await getPostBySlug(params.slug);
 
   const specialStyle = post.style === "special" ? "bg-yellow-50 p-6 rounded-lg" : "";
