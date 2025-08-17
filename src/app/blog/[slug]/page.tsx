@@ -1,11 +1,10 @@
 import { getPostBySlug } from "../../lib/posts";
-import { Metadata } from "next";
 
-interface Params {
-  slug: string;
-}
-
-export default async function PostPage({ params }: { params: Params }) {
+export default async function PostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const post = await getPostBySlug(params.slug);
 
   const specialStyle = post.style === "special" ? "bg-yellow-50 p-6 rounded-lg" : "";
