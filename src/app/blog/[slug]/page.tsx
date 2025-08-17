@@ -13,9 +13,10 @@ export default function PostPage({ params }: { params: Promise<{ slug: string }>
       <p className="text-gray-500 mb-6">{post.date}</p>
 
       <article
-        className="prose prose-lg max-w-none prose-img:rounded-lg prose-img:w-full prose-img:h-auto"
-        dangerouslySetInnerHTML={{ __html: post.content }}
-      />
+  className="prose prose-lg max-w-none prose-img:rounded-lg prose-img:w-full"
+  dangerouslySetInnerHTML={{ __html: post.content }}
+/>
+
     </main>
   );
 }

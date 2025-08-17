@@ -1,51 +1,116 @@
-@import "tailwindcss";
-@import "highlight.js/styles/github-dark.css";
+  @import "tailwindcss";
+  @import "highlight.js/styles/github-dark.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  @theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+  }
 
-.prose pre {
-  background-color: #1e1e1e;
-  color: #d4d4d4;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-}
-/* Стилі для таблиць у Markdown */
-.prose table {
-  width: 100%;
-  border-collapse: collapse;
-}
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
 
-.prose th,
-.prose td {
-  border: 1px solid #5b82bb; /* Tailwind gray-300 */
-  padding: 0.5rem;
-  text-align: left;
-}
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-.prose th {
-  background-color: #9e9676; /* Tailwind gray-100 */
-}
+
+  /* Загальні стилі для Markdown */
+  .prose {
+    /* абзаци */
+    p {
+      margin-bottom: 1em;
+      line-height: 1.7;
+    }
+
+    /* списки */
+    ul {
+  list-style: disc inside; /* крапки */
+    padding-left: 1.25em;
+  }
+
+  ol {
+    list-style: decimal inside; /* нумерація */
+    padding-left: 1.25em;
+  }
+
+  li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+
+    /* чекбокси */
+    input[type="checkbox"] {
+      margin-right: 0.5em;
+    }
+
+    /* таблиці */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1em;
+    }
+
+    th, td {
+      border: 1px solid #697587; /* Tailwind gray-300 */
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #8c98b0; /* Tailwind gray-100 */
+    }
+
+    /* код-блоки */
+    pre {
+    background-color: #4b4e6d;
+    color: #181313;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    }
+
+    code {
+        background-color: #0d0c0c;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+    }
+
+    /* зображення */
+    img {
+      border-radius: 0.5rem;
+      max-width: 100%;
+      height: auto;
+    }
+     h1 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    }
+    h2 {
+      font-size: 1.875rem; /* text-3xl */
+      font-weight: 700;
+      margin-top: 1.25em;
+      margin-bottom: 0.5em;
+    }
+
+     h3 {
+      font-size: 1.5rem; /* text-2xl */
+      font-weight: 600;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+      }
+  }
