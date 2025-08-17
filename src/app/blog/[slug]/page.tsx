@@ -1,6 +1,12 @@
 import { getPostBySlug } from "../../lib/posts";
 
-export default async function PostPage(props: any) {
+interface PostPageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function PostPage(props: PostPageProps) {
   const slug = props.params.slug;
   const post = await getPostBySlug(slug);
 
