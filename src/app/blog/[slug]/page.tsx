@@ -1,14 +1,15 @@
 import { getPostBySlug } from "../../lib/posts";
 
-interface PostPageProps {
-  params: {
-    slug: string;
-  };
+interface Params {
+  slug: string;
 }
 
-export default async function PostPage(props: PostPageProps) {
-  const slug = props.params.slug;
-  const post = await getPostBySlug(slug);
+export default async function PostPage({
+  params,
+}: {
+  params: Params;
+}) {
+  const post = await getPostBySlug(params.slug);
 
   const specialStyle = post.style === "special" ? "bg-yellow-50 p-6 rounded-lg" : "";
 
