@@ -1,13 +1,14 @@
 import { getPostBySlug } from "../../lib/posts";
+import { Metadata } from "next";
 
-interface Props {
-  params: { slug: string };
+interface Params {
+  slug: string;
 }
 
-export default async function PostPage({ params }: Props) {
+export default async function PostPage({ params }: { params: Params }) {
   const post = await getPostBySlug(params.slug);
 
-  const specialStyle = post.style === "special" ? "bg-yellow-600 p-6 rounded-lg" : "";
+  const specialStyle = post.style === "special" ? "bg-yellow-50 p-6 rounded-lg" : "";
 
   return (
     <main className={`max-w-4xl mx-auto p-6 ${specialStyle}`}>
