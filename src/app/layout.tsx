@@ -1,5 +1,5 @@
-import Link from "next/link";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 export const metadata = {
   title: "Мій сайт",
@@ -14,14 +14,8 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body>
-        <header style={{ padding: "20px", background: "#a38181ff" }}>
-          <nav style={{ display: "flex", gap: "20px" }}>
-            <Link href="/">Головна</Link>
-            <Link href="/blog">Блог</Link>
-            <Link href="/contacts">Контакти</Link>
-          </nav>
-        </header>
-        <main style={{ padding: "20px" }}>{children}</main>
+        <Navbar />
+        <main className="max-w-5xl mx-auto p-6">{children}</main>
       </body>
     </html>
   );
