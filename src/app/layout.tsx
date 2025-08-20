@@ -2,8 +2,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 
 export const metadata = {
-  title: "Мій сайт",
-  description: "Next.js приклад",
+  title: "Pavlo's Blog - Next.js Starter",
+  description: "Next.js blog starter with Tailwind CSS and TypeScript",
 };
 
 export default function RootLayout({
@@ -15,7 +15,8 @@ export default function RootLayout({
     <html lang="uk">
       <body>
         <Navbar />
-        <main className="max-w-5xl mx-auto p-6">{children}</main>
+      
+        <main className="max-w-5xl mx-auto p-10 pt-20">{children}</main>
       </body>
     </html>
   );

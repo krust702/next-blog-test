@@ -8,9 +8,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-rose-400 text-white p-4 relative">
+    <header className="bg-rose-400 text-white p-4 fixed w-full shadow-md">
       <div className="max-w-5xl mx-auto flex items-center justify-between">
-        <h1 className="font-bold text-lg">Мій сайт</h1>
+        <h1 className="font-bold text-lg">Carpathian Legacy</h1>
 
         <nav className="hidden md:flex gap-6">
           <Link href="/" className="hover:underline">Головна</Link>

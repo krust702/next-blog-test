@@ -18,7 +18,7 @@ style: "special"
 
 ## Код
 
-```ts
+```tsx
 function hello(name: string) {
   console.log("Hello " + name);
 }

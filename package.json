@@ -36,7 +36,7 @@
     "tailwindcss": "^4.1.12",
     "typescript": "^5"
   },
-  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
+  "description": "This is a Next.js blog starter template with Tailwind CSS, TypeScript, and Markdown support.",
   "main": "index.js",
   "keywords": [],
   "author": "",
