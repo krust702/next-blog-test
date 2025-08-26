@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 export const metadata = {
   title: "Pavlo's Blog - Next.js Starter",
   description: "Next.js blog starter with Tailwind CSS and TypeScript",
+  keywords: "Next.js, Tailwind CSS, TypeScript, blog",
 };
 
 export default function RootLayout({
@@ -15,7 +16,6 @@ export default function RootLayout({
     <html lang="uk">
       <body>
         <Navbar />
-      
         <main className="max-w-5xl mx-auto p-10 pt-20">{children}</main>
       </body>
     </html>

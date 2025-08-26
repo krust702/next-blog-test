@@ -7,15 +7,18 @@ export default function HomePage() {
         <h1 className="text-4xl  sm:text-6xl font-extrabold mb-6">
           Привіт 👋 Я Павло
         </h1>
-        <p className="text-gray-600 text-lg sm:text-xl max-w-2xl mx-auto">
+        <p className="text-gray-500 text-lg sm:text-xl max-w-2xl mx-auto">
           Тут мій блог про <span className="font-semibold">технології</span>,{" "}
-          <span className="font-semibold">життя</span> та все, що мене драйвить 🚀
+          <span className="font-semibold">життя</span> та все, що мене драйвить
+          🚀
         </p>
       </section>
 
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <article className="p-6 bg-white shadow rounded-2xl hover:shadow-lg transition">
-          <h2 className="text-xl text-gray-600 font-bold mb-3">📝 Останні пости</h2>
+        <article className="p-6 bg-white shado  w rounded-2xl hover:shadow-lg transition">
+          <h2 className="text-xl text-gray-600 font-bold mb-3">
+            📝 Останні пости
+          </h2>
           <p className="text-gray-500 mb-4">
             Свіжі статті з блогу, які можна почитати у вільний час.
           </p>

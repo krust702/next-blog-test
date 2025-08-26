@@ -14,7 +14,7 @@ style: "special"
 | Name  | Age |
 |-------|-----|
 | Pavlo | 30  |
-| Anna  | 28  |
+| Lily  | 28  |
 
 ## Код
 
